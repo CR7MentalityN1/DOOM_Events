@@ -19,4 +19,18 @@ btn.addEventListener("click", () => {
     btn.style.backgroundColor = "#4CAF50";
     btn.style.color = "white";
 });
+const input = document.getElementById("nameInput");
+const showBtn = document.getElementById("showName");
+const output = document.getElementById("output");
+
+showBtn.addEventListener("click", () => {
+    if (input.value.trim() !== "") {
+        output.textContent = `Привет, ${input.value.trim()}!`;
+        output.style.color = "green";
+    } else {
+        output.textContent = "Пожалуйста, введите имя!";
+        output.style.color = "red";
+    }
+});
+
 
